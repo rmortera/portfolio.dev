@@ -4,6 +4,7 @@ import JavaScriptIcon from './icons/JavaScriptIcon.astro'
 import NextJSIcon from './icons/NextJSIcon.astro'
 import TailwindIcon from './icons/TailwindIcon.astro'
 import GitHubIcon from "./icons/GitHubIcon.astro"
+import CSSIcon from "./icons/CSSIcon.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
@@ -28,6 +29,11 @@ const TAGS = {
     name: "Tailwind",
     class: "bg-white/10 text-white border border-white/10",
     icon: TailwindIcon
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-white/10 text-white border border-white/10",
+    icon: CSSIcon
   }
 }
 
@@ -43,13 +49,21 @@ const PROJECTS = [
     tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.TAILWIND]
   },
   {
-    title: "Fast Pizza App",
+    title: "Fast React Pizza App",
     description: "Made with React and styled with Tailwind CSS, it is a responsive app that allows the user to enter their name, see a complete menu of pizzas using an API, which displays an image, the name of the pizza, its ingredients and price. The user can choose one or more pizzas, as well as reduce the quantity or eliminate it, add it to the shopping cart and place the order, and then indicate the address and information to show the personalized order with the user's data, the total to pay and the estimated time it will arrive at the entered address.",
     link: "https://the-fast-pizza-app.netlify.app/",
     github: "https://github.com/rmortera/fast-react-pizza",
     image: "/projects/fast_react_pizza.webp",
     tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.TAILWIND]
-  }
+  },
+  {
+    title: "Shopping List",
+    description: "Made with React, JavaScript, HTML and CSS. Responsive App that allows the user enter any item, add it to the list, check it, delete it and sort them by alphabetical order, input order or if it is checked already, as well as clear the complete list.",
+    link: "https://my-shoppinglist-2024.netlify.app/",
+    github: "https://github.com/rmortera/my-shopping-list",
+    image: "/projects/shopping_list.webp",
+    tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.CSS]
+  },
 ]
 ---
 
@@ -58,13 +72,13 @@ const PROJECTS = [
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border dark:lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
       <img alt="Project Images" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
   <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-blue-200 mt-2">
+    <h3 class="text-4xl font-bold dark:text-[#fafafa] text-[#030303d9] mt-2">
       {title}
     </h3>
 
@@ -73,7 +87,7 @@ const PROJECTS = [
           {tags.map((tag) => (
             <li>
               <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 text-[#030303d9] dark:text-[#fafafa] border border-gray-950/20 font-semibold`}
               >
                 <tag.icon class="size-4" />
                 {tag.name}
@@ -82,13 +96,12 @@ const PROJECTS = [
           ))}
         </ul>
 
-      <div class="mt-2 text-gray-200 text-pretty">{description}</div>
+      <div class="mt-2 dark:text-[#fafafa] text-[#030303d9] text-sm lg:text-lg text-pretty">{description}</div>
       <footer class="flex items-end justify-start mt-4 gap-x-4">
           {github && (
             <LinkButton href={github}>
               <GitHubIcon class="size-6" />
-              Code
-              
+              Code             
             </LinkButton>
           )}
           {link && (

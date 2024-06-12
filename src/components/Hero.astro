@@ -1,0 +1,46 @@
+---
+const personalImageAlt = "Roberto Mortera"
+import SocialPill from "./SocialPill.astro";
+import GitHubIcon from "./icons/GitHubIcon.astro";
+import LinkedInIcon from "./icons/LinkedInIcon.astro";
+import MailIcon from "./icons/MailIcon.astro";
+import Badge from "./Badge.astro"
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-16"
+      src="/profile_pic.webp"
+      alt={personalImageAlt}
+    />
+
+    <a href="https://www.linkedin.com/in/robmortera/" target="_blank" rel="noopener" class="flex items-center transition md:justify-center">
+      <Badge>Available for work</Badge></a>   
+  </div>  
+
+  <h1 class="dark:text-[#fafafa] text-[#030303d9] text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+  Hi, I'm Roberto Mortera 
+  </h1>
+
+  <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+    <span class="dark:text-[#ffdb58] text-[#030303d9]">Frontend Developer.</span> <span class="dark:text-[#fafafa] text-[#030303d9]">Specialized in creating unique applications using technologies such as JavaScript, React, HTML/CSS, Tailwind, Next.Js.</span> 
+  </h2>
+
+  <nav class="flex gap-4 mt-8 flex-wrap">
+      <SocialPill href="https://www.linkedin.com/in/robmortera/">
+        <LinkedInIcon class="size-4 md:size-6"/>
+        LinkedIn
+      </SocialPill>
+
+      <SocialPill href="https://github.com/rmortera">
+        <GitHubIcon class="size-4 md:size-6"/>
+        GitHub
+      </SocialPill>	
+
+      <SocialPill href="mailto:robmrtra@gmail.com">
+        <MailIcon class="size-4 md:size-6"/>
+        Contact me
+      </SocialPill>	
+  </nav>
+</div>
