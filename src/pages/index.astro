@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import LinkedInIcon from '../components/icons/LinkedInIcon.astro'
+import GitHubIcon from '../components/icons/GitHubIcon.astro'  
+import MailIcon from '../components/icons/MailIcon.astro'  
+import JobExperienceIcon from '../components/icons/JobExperienceIcon.astro'  
+import SocialPill from '../components/SocialPill.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import ProjectsIcon from '../components/icons/ProjectsIcon.astro';
+import Projects from '../components/Projects.astro';
+---
+
+<Layout title="Portfolio Roberto Mortera - Frontend Developer" description='Hire Roberto Mortera. Frontend Developer, specialized in creating unique applications using technologies such as JavaScript, React, HTML/CSS, Tailwind, Next.Js.'>
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-32">
+
+			<img class="rounded-full size-12 mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScgdKdJc9hNr8tuQZEpDHFNgx-gKcZlYpBVg&s" alt="profile picture">
+
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">Hi, I'm Roberto Mortera <a href="https://www.linkedin.com/in/robmortera/" target="_blank" rel="noopener" class="flex justify-center items-center"><Badge>Available for work</Badge></a> </h1>
+		  <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+				<span>Frontend Developer.</span> <span class="opacity-80 text-blue-100/90">Specialized in creating unique applications using technologies such as JavaScript, React, HTML/CSS, Tailwind, Next.Js.</span> </h2>
+	
+	    <nav class="flex gap-4 mt-8 flex-wrap">
+					<SocialPill href="https://www.linkedin.com/in/robmortera/">
+						<LinkedInIcon class="size-4 md:size-6"/>
+						LinkedIn
+					</SocialPill>
+
+					<SocialPill href="https://github.com/rmortera">
+						<GitHubIcon class="size-4 md:size-6"/>
+						GitHub
+					</SocialPill>	
+
+					<SocialPill href="mailto:robmrtra@gmail.com">
+						<MailIcon class="size-4 md:size-6"/>
+						Contact me
+					</SocialPill>	
+			</nav>
+	  </SectionContainer>
+
+		<SectionContainer>
+			<h2 class="text-3xl font-semibold mb-6 flex items-center gap-x-3">
+				<JobExperienceIcon class="size-7"/> 
+				Professional Experience
+			</h2>
+			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="projects">
+			<h2 class="text-3xl font-semibold mb-6 flex items-center gap-x-3">
+				<ProjectsIcon class="size-7"/> 
+				Projects
+			</h2>
+			<Projects />
+		</SectionContainer>
+	</main>
+</Layout>
+

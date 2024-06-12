@@ -1,0 +1,36 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+  {
+    date: "2023-2024",
+    title: "3D Animator (Shining Isle Production, LLC)",
+    description: "Responsible for creating high quality 3D animation. Attention to detail in character development, story and scene sequence and continuity. Using industry standard software such as Autodesk Maya. Follow up on assignments on a weekly basis."
+  },
+  {
+    date: "2023",
+    title: "3D Animator (Boxel Studio)",
+    description: "Experience in 3D animation. Solid knowledge of animation principles, lip-sync and body mechanics, as well as animation tools, workflow and project pipeline."
+  },
+  {
+    date: "2021-2022",
+    title: "3D Animator (Mighty Studio)",
+    description: "Experience in creating 3D cartoony animation. Strong understanding of animation principles including lip sync and body mechanics. Troubleshoot and solve technical issues related to animation software, tools or pipeline."
+  },
+  {
+    date: "2020",
+    title: "3D Animator (Zebra Studio)",
+    description: "Ability to work with motion capture data, clean up and enhance animations as needed. Collaborate with other animators to develop and implement different animation styles and techniques."
+  }
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">   
+  {
+    EXPERIENCE.map(experience => (
+    <li class="mb-10 ms-4">
+      <ExperienceItem {...experience}/>
+    </li>
+    ))
+  }
+</ol>
+
