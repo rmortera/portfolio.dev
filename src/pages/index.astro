@@ -16,7 +16,7 @@ import AboutMe from '../components/AboutMe.astro';
 
 <Layout title="Portfolio Roberto Mortera - Frontend Developer" description='Hire Roberto Mortera. Frontend Developer, specialized in creating unique applications using technologies such as JavaScript, React, HTML/CSS, Tailwind, Next.Js.'>
 	<main class="px-4">
-		<SectionContainer class="py-44 pb-32">
+		<SectionContainer class="py-16 md:py-36">
 
 			<img class="rounded-full size-12 mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScgdKdJc9hNr8tuQZEpDHFNgx-gKcZlYpBVg&s" alt="profile picture">
 
@@ -42,7 +42,7 @@ import AboutMe from '../components/AboutMe.astro';
 			</nav>
 	  </SectionContainer>
 
-		<SectionContainer>
+		<SectionContainer class="pb-12 md:pb-32">
 			<h2 class="text-3xl font-semibold mb-6 flex items-center gap-x-3">
 				<JobExperienceIcon class="size-7"/> 
 				Professional Experience
@@ -50,7 +50,7 @@ import AboutMe from '../components/AboutMe.astro';
 			<Experience />
 		</SectionContainer>
 
-		<SectionContainer id="projects">
+		<SectionContainer id="projects" class="pb-12 md:pb-32">
 			<h2 class="text-3xl font-semibold mb-6 flex items-center gap-x-3">
 				<ProjectsIcon class="size-7"/> 
 				Projects
@@ -58,9 +58,9 @@ import AboutMe from '../components/AboutMe.astro';
 			<Projects />
 		</SectionContainer>
 
-		<SectionContainer id="about-me">
+		<SectionContainer id="about-me" class="pb-12 md:pb-32">
       <h2
-        class="text-3xl font-semibold mb-6 flex items-center gap-x-3"
+        class="text-3xl font-semibold mb-6 flex items-center gap-x-8"
       >
         <ProfileCheck class="size-8" />
         About me
