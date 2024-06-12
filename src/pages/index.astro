@@ -9,7 +9,9 @@ import SocialPill from '../components/SocialPill.astro';
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import ProjectsIcon from '../components/icons/ProjectsIcon.astro';
+import ProfileCheck from '../components/icons/ProfileCheck.astro';
 import Projects from '../components/Projects.astro';
+import AboutMe from '../components/AboutMe.astro';
 ---
 
 <Layout title="Portfolio Roberto Mortera - Frontend Developer" description='Hire Roberto Mortera. Frontend Developer, specialized in creating unique applications using technologies such as JavaScript, React, HTML/CSS, Tailwind, Next.Js.'>
@@ -55,6 +57,16 @@ import Projects from '../components/Projects.astro';
 			</h2>
 			<Projects />
 		</SectionContainer>
+
+		<SectionContainer id="about-me">
+      <h2
+        class="text-3xl font-semibold mb-6 flex items-center gap-x-3"
+      >
+        <ProfileCheck class="size-8" />
+        About me
+      </h2>
+      <AboutMe />
+    </SectionContainer>
 	</main>
 </Layout>
 
