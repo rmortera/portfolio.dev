@@ -17,22 +17,18 @@ const TAGS = {
   },
   REACT: {
     name: "React",
-    class: "bg-white/10 text-[#030303d9] dark:text-[#fafafa] border border-white/10",
     icon: ReactIcon
   },
   JAVASCRIPT: {
     name: "JavaScript",
-    class: "bg-white/10 text-[#030303d9] dark:text-[#fafafa] border border-white/10",
     icon: JavaScriptIcon
   },
   TAILWIND: {
     name: "Tailwind",
-    class: "bg-white/10 text-[#030303d9] dark:text-[#fafafa] border border-white/10",
     icon: TailwindIcon
   },
   CSS: {
     name: "CSS",
-    class: "bg-white/10 text-[#030303d9] dark:text-[#fafafa] border border-white/10",
     icon: CSSIcon
   }
 }
@@ -87,7 +83,7 @@ const PROJECTS = [
           {tags.map((tag) => (
             <li>
               <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-gray-950/20 font-semibold`}
+                class={`flex gap-x-2 rounded-full text-xs bg-white/10 text-[#030303d9] dark:text-[#fafafa] py-1 px-2 border border-gray-950/20 dark:border-white/10 font-semibold`}
               >
                 <tag.icon class="size-4" />
                 {tag.name}
