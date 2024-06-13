@@ -5,6 +5,7 @@ import NextJSIcon from './icons/NextJSIcon.astro'
 import TailwindIcon from './icons/TailwindIcon.astro'
 import GitHubIcon from "./icons/GitHubIcon.astro"
 import CSSIcon from "./icons/CSSIcon.astro"
+import HTMLIcon from "./icons/HTMLIcon.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
@@ -30,7 +31,11 @@ const TAGS = {
   CSS: {
     name: "CSS",
     icon: CSSIcon
-  }
+  },
+  HTML: {
+    name: "HTML",
+    icon: HTMLIcon
+  },
 }
 
 
@@ -53,6 +58,14 @@ const PROJECTS = [
     tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.TAILWIND]
   },
   {
+    title: "Music Player",
+    description: "Made with JavaScript, HTML and CSS, digital music player.",
+    link: "https://my-musicplayer-app.netlify.app/",
+    github: "https://github.com/rmortera/music-player-app.git",
+    image: "/projects/music-player.webp",
+    tags: [TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS]
+  },
+  {
     title: "Shopping List",
     description: "Made with React, JavaScript, HTML and CSS. Responsive App that allows the user enter any item, add it to the list, check it, delete it and sort them by alphabetical order, input order or if it is checked already, as well as clear the complete list.",
     link: "https://my-shoppinglist-2024.netlify.app/",
@@ -60,6 +73,7 @@ const PROJECTS = [
     image: "/projects/shopping_list.webp",
     tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.CSS]
   },
+  
 ]
 ---
 
