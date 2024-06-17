@@ -1,4 +1,10 @@
 ---
+import SocialPill from "./SocialPill.astro"
+import CVIcon from "./icons/CVIcon.astro"
+import GitHubIcon from "./icons/GitHubIcon.astro"
+import LinkedInIcon from "./icons/LinkedInIcon.astro"
+import MailIcon from "./icons/MailIcon.astro"
+
  const personalImageAlt = "Roberto Mortera"
 ---
 
@@ -14,3 +20,20 @@
   <img width="200" height="200" src="/profile_pic.jpg" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 " style="object-position: 50% 50%">
 
 </article>
+
+<nav class="flex gap-4 mt-8 flex-wrap">
+  <SocialPill href="https://www.linkedin.com/in/robmortera/">
+    <LinkedInIcon class="size-4 md:size-6"/>
+    LinkedIn
+  </SocialPill>
+
+  <SocialPill href="https://github.com/rmortera">
+    <GitHubIcon class="size-4 md:size-6"/>
+    GitHub
+  </SocialPill>	
+
+  <SocialPill href="mailto:robmrtra@gmail.com">
+    <MailIcon class="size-4 md:size-6"/>
+    Contact
+  </SocialPill>	
+</nav>
